@@ -1,0 +1,15 @@
+body{
+    overflow: hidden;
+}
+
+#inst {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    border: 2px solid black;
+    padding: 10px;
+}
+#dronecont{
+     justify-content: center; align-items: center; height: 80vh;
+}
