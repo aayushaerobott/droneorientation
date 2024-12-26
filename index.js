@@ -28,7 +28,7 @@ let roll = -1;
 let pitch = -1;
 let yaw = -146;
 
-loader.load("assets/models/drone/scene.gltf", function (gltf) {
+loader.load("scene.gltf", function (gltf) {
   object = gltf.scene;
   object.scale.set(6, 6, 4);
   // Apply initial rotation
