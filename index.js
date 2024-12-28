@@ -26,7 +26,7 @@ const loader = new THREE.GLTFLoader();
 let object;
 let roll = -1;
 let pitch = -1;
-let yaw = -146;
+let yaw = 34;
 
 loader.load("scene.gltf", function (gltf) {
   object = gltf.scene;
@@ -62,36 +62,48 @@ document.addEventListener("keydown", function (event) {
       roll += step;
       console.log(`Roll: ${roll}`);
       document.getElementById("command").innerHTML = "Roll Right";
+      pitch = -1;
+      yaw = -146;
       break;
     case "4": // Reverse Roll
       roll -= step;
       console.log(`Roll: ${roll}`);
       document.getElementById("command").innerHTML = "Roll Left";
+      pitch = -1;
+      yaw = -146;
       break;
     case "2": // back Pitch adjustment
-      pitch += step;
+      pitch += 2;
       console.log(`Pitch: ${pitch}`);
       document.getElementById("command").innerHTML = "Pitch Backward";
+      roll = -1;
+      yaw = -146;
       break;
     case "8": // forwrd pitch
-      pitch -= step;
+      pitch -= 2;
       console.log(`Pitch: ${pitch}`);
       document.getElementById("command").innerHTML = "Pitch Forward";
+      roll = -1;
+      yaw = -146;
       break;
     case "9": // Yaw adjustment
       yaw += step;
       console.log(`Yaw: ${yaw}`);
       document.getElementById("command").innerHTML = "Yaw Right";
+      roll = -1;
+      pitch = -1;
       break;
     case "7": // Reverse Yaw
       yaw -= step;
       console.log(`Yaw: ${yaw}`);
       document.getElementById("command").innerHTML = "Yaw Left";
+      roll=-1;
+      pitch=-1;
       break;
     case "0":
       roll = -1;
       pitch = -1;
-      yaw = -146;
+      yaw = 34;
       document.getElementById("command").innerHTML = " ";
       break;
   }
