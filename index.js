@@ -13,7 +13,7 @@ renderer.setSize(window.innerWidth, window.innerHeight);
 document.getElementById("3ddrone").appendChild(renderer.domElement);
 
 const topLight = new THREE.DirectionalLight(0xffffff, 1.5);
-topLight.position.set(100, 400, 400);
+topLight.position.set(10, 10, 100);
 scene.add(topLight);
 
 const ambientLight = new THREE.AmbientLight(0xffffff, 4);
@@ -26,7 +26,7 @@ const loader = new THREE.GLTFLoader();
 let object;
 let roll = -1;
 let pitch = -1;
-let yaw = 34;
+let yaw = -146;
 
 loader.load("scene.gltf", function (gltf) {
   object = gltf.scene;
@@ -103,7 +103,7 @@ document.addEventListener("keydown", function (event) {
     case "0":
       roll = -1;
       pitch = -1;
-      yaw = 34;
+      yaw = -146;
       document.getElementById("command").innerHTML = " ";
       break;
   }
